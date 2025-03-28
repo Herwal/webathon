@@ -1,63 +1,40 @@
-# Webathon 2025
+PROKRASTINERING ENABLER
 
-Velkommen til Webkoms episke hackathon 2025!
+Gruppe: PROKRASTINERING ENABLER
+Medlemmer: PK og HHW
+Beskrivelse
 
-- **📍 Hvor?** Programmerbar på Høytek
-- **📃 Hva?** [Se reglene for mer info om hva dere skal gjøre](#regler)
-- **🕙 Når?** Fra fredag 28. mars til søndag 30. mars
-- **🍕 Mat?** Ja! Det blir mat fredag og lørdag
-- **🎁 Premie?** Dritkul premie til vinnerlaget!
+Velkommen til PROKRASTINERING ENABLER, et prosjekt laget av to personer som er eksperter på å utsette ting. Vi har brukt våre mange års erfaring i å unngå produktivitet for å lage et system som hjelper deg med å gjøre akkurat det samme, bare på en mye mer teknisk og sofistikert måte. Takket være vårt banebrytende arbeid med å ikke gjøre ting, har vi utviklet et verktøy som effektivt lar deg gjøre så lite som mulig, på den mest komplekse måten.
+Hvorfor dette prosjektet er:
 
-## Opplegg
+    Smart: Dette prosjektet er som et Netflix-algoritme for å gjøre ingenting. Den analyserer din livsstil, og hjelper deg med å finne den perfekte balansen mellom prokrastinering og uendelig venting på den "rette" tiden til å starte.
 
-### Oppstart
+    Raskt: Vi vet at du ikke har tid til å vente på at ting skal skje. Derfor har vi gjort dette systemet så raskt at du kan begynne å utsette med en gang. Fordi hvem har tid til å vente på at produktivitet skal skje når man kan gjøre ingenting raskt?
 
-Vi starter med et smell **fredag 28. mars 17:00**. Det blir først en kort presentasjon om regler ([står også under](#regler)) og diverse info om hackathonet. I tillegg presenterer vi tre stikkord som dere skal basere prosjektene deres rundt. Så blir det en liten introduksjon til react og nextjs for de som ønsker det. Baren åpner også etterhvert. Se [hvordan man kommer i gang](#komme-i-gang).
+    Mange: Er du en av mange som utsetter alt? Flott! Dette prosjektet er laget for alle – uansett om du er alene eller har en hel gruppe som deler din lidenskap for å unngå ansvar. Det er skalerbart og fleksibelt, akkurat som din evne til å finne nye måter å unngå jobb på.
 
-Gjennom hele helgen vil det være medlemmer av Webkom til stede for å hjelpe og svare på spørsmål.
+Funksjoner
 
-### Presentasjon
+    Tidsstyring: La oss være ærlige, ingen av oss er gode på tidsstyring. Derfor lar PROKRASTINERING ENABLER deg bruke tiden på å unngå alt som er viktig.
 
-På søndag 12:00 skal alle presentere prosjektene sine og de blir vurdert av en juri. Vinnerlaget får en heftig premie!
+    Brukervennlig grensesnitt: Du vil umiddelbart føle deg hjemme med grensesnittet vårt. Det er designet for å være så intuitivt at du nesten ikke trenger å bruke det.
 
-## Regler
+    Skalering: Er du alene? Skalere opp. Er du mange? Vi er ekspertene på å gjøre ingenting sammen.
 
-1. Man skal jobbe i lag. Lag må ha to til fire medlemmer. Man kan bestemme lag på forhånd, eller møte opp og få tildelt et lag ved oppstart.
-2. Hvert lag skal lage og presentere et produkt. Det kan være hva som helst, uten om to krav:
-   - Det **må** være noe grafisk (må være presentabelt).
-     - Spill, nettside, simulasjon, visualisering, TUI app, osv.
-   - Det **må** være relevant til tre stikkord som blir annonsert ved oppstart.
-3. Man kan bruke valgfritt språk.
-4. Det er lov å bruke rammeverk og biblioteker.
-5. Man må levere prosjektet **innen 12:00 på søndag**. Se [hvordan levere prosjektet](#levering).
-6. Prosjektet sin README skal inneholde følgende:
-   - Gruppenavn og navn på medlemmer
-   - Hva idéen er og hvordan dere har implementert den
-   - Ikke et krav, men fint om det inneholder screenshots også
+Hvordan komme i gang
 
-## Vurdering
+    Last ned prosjektet fra GitHub – det er den første tingen du kan gjøre før du begynner å utsette alt annet.
 
-Hvert prosjekt blir vurdert av en juri bestående av Webkom og Bekk. Prosjektene blir vurdert på kriteriene under. Hver kriterie har en maks antall poeng. Den samlede scoren for hver kriterie fra hvert jurimedlem er den totale scoren til prosjektet.
+    Kjør applikasjonen – fordi det er mye lettere å gjøre det enn å faktisk jobbe.
 
-- **Idé (10):** Hvor unik idéen er. Hvor godt den er gjennomført.
+    Konfigurer innstillingene – eller ikke. Hvem trenger det når du har mestret kunsten av prokrastinering?
 
-- **Kode (5):** Hvor mye som er laget selv. Hvor kreative løsningene er.
+Teknologier brukt
 
-- **Presentasjon (5):** Hvor bra idéen og prosjektet som helhet ble presentert.
+    Programmeringsspråk: Kotlin (for å gjøre koding til en morsom og meningsløs aktivitet) og JavaScript (fordi alt som går på internett er viktig, også prokrastinering).
 
-- **Stikkord (5):** Hvor unik og kreativ tolkningen av stikkordene er.
+    Verktøy: Visual Studio Code (for å gjøre alt i et miljø som oppfordrer til distraksjon), GitHub Actions for CI/CD (for å få enda mer tid til å utsette ting).
 
-## Komme i gang
+Bidrag
 
-Fork dette repoet (må være public). Husk å skrive om README etter regel 6!
-
-## Levering
-
-Prosjektet skal leveres **innen 12:00 på søndag**. Lag en tag med navnet "innlevering" og push til repoet.
-
-### Hvordan lage tag
-
-```sh
-git tag innlevering
-git push --tags
-```
+Vi er åpne for bidrag – men vi forstår selvfølgelig hvis du heller utsetter det til i morgen. Hvis du ønsker å bidra, kan du åpne en pull request (eller bare gå videre med livet, vi vet hvordan du har det).
