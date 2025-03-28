@@ -4,7 +4,7 @@ float[] angle = new float[numLines]; // Angle for each line
 float[] distance = new float[numLines]; // Distance from the center
 float[] speed = new float[numLines]; // Speed for each line
 float shipX, shipY;
-float minRadius = 25; // Minimum radius to avoid spawning lines inside the circle
+float minRadius = 10; // Minimum radius to avoid spawning lines inside the circle
 
 void setup() {
   size(1000, 1000);
@@ -12,13 +12,13 @@ void setup() {
   smooth();
   
   // Load the image (make sure to place the image file in the "data" folder)
-  shipImage = loadImage("ship.png"); // Replace with your image file name
+  shipImage = loadImage("Falcon.png"); // Replace with your image file name
   
   // Initialize lines in circular motion
   for (int i = 0; i < numLines; i++) {
     angle[i] = random(TWO_PI); // Random starting angle
     distance[i] = random(minRadius + 1, 100); // Ensure the starting distance is at least 25 + 1 unit from the center
-    speed[i] = random(5, 10); // Faster random speed for each line
+    speed[i] = random(40, 60); // Faster random speed for each line
   }
   
   shipX = width / 2;
@@ -62,9 +62,9 @@ void draw() {
   noStroke(); // Remove the stroke
   ellipse(shipX, shipY, minRadius * 2, minRadius * 2); // Draw the filled circle
   
-  // Place the PNG image in the center of the small circle
-  float imgWidth = shipImage.width * 0.5; // Scale the image to fit
-  float imgHeight = shipImage.height * 0.5;
+  // Place the PNG image in the center of the small circle and make it larger
+  float imgWidth = shipImage.width * 4.8; // Increase scale to make the image larger (adjust the factor as needed)
+  float imgHeight = shipImage.height * 4.8; // Increase scale to make the image larger
   imageMode(CENTER); // Set image mode to CENTER to draw it from the center of the circle
   image(shipImage, shipX, shipY, imgWidth, imgHeight); // Draw the image at the center
 }
