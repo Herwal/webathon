@@ -12,7 +12,7 @@ void draw() {
     fireworks.add(new Firework());
   }
   
-  for (int i = fireworks.size() - 1; i >= 0; i--) {s
+  for (int i = fireworks.size() - 1; i >= 0; i--) {
     Firework f = fireworks.get(i);
     f.update();
     f.show();
