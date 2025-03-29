@@ -33,10 +33,19 @@ export default function Home() {
   const [currentSketch, setCurrentSketch] = useState(0);
   const [sketches, setSketches] = useState<React.FC[]>([]);
   const [isFading, setIsFading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Preload all sketches on mount
   useEffect(() => {
-    importSketches().then(setSketches);
+    importSketches()
+      .then((loadedSketches) => {
+        setSketches(loadedSketches);
+        setIsLoading(false); // Set loading to false once sketches are loaded
+      })
+      .catch((error) => {
+        console.error("Error loading sketches:", error);
+        setIsLoading(false); // Ensure loading is set to false even if there's an error
+      });
   }, []);
 
   const handleNextSketch = () => {
@@ -50,14 +59,14 @@ export default function Home() {
   // Add event listener for keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Enter") {
+      if (event.key === "Enter" && !isLoading) {
         handleNextSketch();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [isLoading]);
 
   const CurrentSketchComponent = sketches[currentSketch];
 
@@ -91,13 +100,15 @@ export default function Home() {
         </div>
 
         {/* Next Button */}
-        <button
-          onClick={handleNextSketch}
-          aria-label="Next Sketch"
-          className="mt-2 px-6 py-3 bg-pink-500 text-white rounded-md text-base md:text-lg hover:bg-pink-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
-        >
-          Next Sketch
-        </button>
+        {!isLoading && (
+          <button
+            onClick={handleNextSketch}
+            aria-label="Next Sketch"
+            className="mt-2 px-6 py-3 bg-pink-500 text-white rounded-md text-base md:text-lg hover:bg-pink-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+          >
+            Next Sketch
+          </button>
+        )}
       </main>
 
       {/* Footer */}
