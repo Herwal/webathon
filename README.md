@@ -18,7 +18,7 @@ bun dev
 Check them out: https://processing.org/
 Specifically, we are using their p5.js library with Next.js
 
-## CONCEPT 
+## Konsept
 
 Gruppe: PROKRASTINERING ENABLER
 Medlemmer: PK og HHW
