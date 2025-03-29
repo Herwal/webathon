@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## How to run
 
-First, run the development server:
+First, run the development server after installing dependancies:
 
 ```bash
 npm run dev
@@ -13,6 +13,10 @@ pnpm dev
 # or
 bun dev
 ```
+
+## WE are using the amazing Processing for all games and animations!
+Check them out: https://processing.org/
+Specifically, we are using their p5.js library with Next.js
 
 ## CONCEPT 
 
