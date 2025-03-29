@@ -6,7 +6,7 @@ const PickTheDoor: React.FC = () => {
 
   useEffect(() => {
     const sketch = (p: p5) => {
-      let door: p5.Image[] = []; // Array to hold the door images
+      const door: p5.Image[] = []; // Array to hold the door images
       let lion: p5.Image, gold: p5.Image;
       let chosenDoor = -1;
       let gameOver = false;

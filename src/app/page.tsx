@@ -68,7 +68,7 @@ export default function Home() {
       <header className="w-full bg-gray-800 p-6 text-center">
         <h1 className="text-3xl font-bold">Welcome to the Brainrot Processing Showcase</h1>
         <p className="mt-2 text-lg">
-          Press <span className="font-bold">Enter</span> or "Next Sketch" to cycle through the sketches.
+          Press <span className="font-bold">Enter</span> or `&quot;Next Sketch`&quot; to cycle through the sketches.
         </p>
         <p className="mt-2 text-sm">
           Current Sketch: {sketchNames[currentSketch]}
