@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## How to run
 
 First, run the development server:
 
@@ -14,23 +14,43 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## CONCEPT 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Gruppe: PROKRASTINERING ENABLER
+Medlemmer: PK og HHW
+Beskrivelse
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Velkommen til PROKRASTINERING ENABLER, et prosjekt laget av to personer som er eksperter på å utsette ting. Vi har brukt våre mange års erfaring i å unngå produktivitet for å lage et system som hjelper deg med å gjøre akkurat det samme, bare på en mye mer teknisk og sofistikert måte. Takket være vårt banebrytende arbeid med å ikke gjøre ting, har vi utviklet et verktøy som effektivt lar deg gjøre så lite som mulig, på den mest komplekse måten.
+Hvorfor dette prosjektet er:
 
-## Learn More
+    Smart: Dette prosjektet er som et Netflix-algoritme for å gjøre ingenting. Den analyserer din livsstil, og hjelper deg med å finne den perfekte balansen mellom prokrastinering og uendelig venting på den "rette" tiden til å starte.
 
-To learn more about Next.js, take a look at the following resources:
+    Raskt: Vi vet at du ikke har tid til å vente på at ting skal skje. Derfor har vi gjort dette systemet så raskt at du kan begynne å utsette med en gang. Fordi hvem har tid til å vente på at produktivitet skal skje når man kan gjøre ingenting raskt?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Mange: Er du en av mange som utsetter alt? Flott! Dette prosjektet er laget for alle – uansett om du er alene eller har en hel gruppe som deler din lidenskap for å unngå ansvar. Det er skalerbart og fleksibelt, akkurat som din evne til å finne nye måter å unngå jobb på.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Funksjoner
 
-## Deploy on Vercel
+    Tidsstyring: La oss være ærlige, ingen av oss er gode på tidsstyring. Derfor lar PROKRASTINERING ENABLER deg bruke tiden på å unngå alt som er viktig.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Brukervennlig grensesnitt: Du vil umiddelbart føle deg hjemme med grensesnittet vårt. Det er designet for å være så intuitivt at du nesten ikke trenger å bruke det.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    Skalering: Er du alene? Skalere opp. Er du mange? Vi er ekspertene på å gjøre ingenting sammen.
+
+Hvordan komme i gang
+
+    Last ned prosjektet fra GitHub – det er den første tingen du kan gjøre før du begynner å utsette alt annet.
+
+    Kjør applikasjonen – fordi det er mye lettere å gjøre det enn å faktisk jobbe.
+
+    Konfigurer innstillingene – eller ikke. Hvem trenger det når du har mestret kunsten av prokrastinering?
+
+Teknologier brukt
+
+    Programmeringsspråk: Kotlin (for å gjøre koding til en morsom og meningsløs aktivitet) og JavaScript (fordi alt som går på internett er viktig, også prokrastinering).
+
+    Verktøy: Visual Studio Code (for å gjøre alt i et miljø som oppfordrer til distraksjon), GitHub Actions for CI/CD (for å få enda mer tid til å utsette ting).
+
+Bidrag
+
+Vi er åpne for bidrag – men vi forstår selvfølgelig hvis du heller utsetter det til i morgen. Hvis du ønsker å bidra, kan du åpne en pull request (eller bare gå videre med livet, vi vet hvordan du har det).
