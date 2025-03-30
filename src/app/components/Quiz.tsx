@@ -21,7 +21,7 @@ const Quiz: React.FC = () => {
       ];
 
       const options = [
-        ["Sahara", "Kalahari", "Gobi", "Atacama"],
+        ["Sahara", "Kalahari", "Antarctica", "Atacama"],
         ["Marie Curie", "Rosalind Franklin", "Ada Lovelace", "Jane Goodall"],
         ["Canberra", "Sydney", "Melbourne", "Brisbane"],
         ["George Orwell", "Aldous Huxley", "Ray Bradbury", "J.R.R. Tolkien"],
@@ -34,7 +34,7 @@ const Quiz: React.FC = () => {
       ];
 
       const answers = [
-        "Sahara",
+        "Antarctica",
         "Marie Curie",
         "Canberra",
         "George Orwell",
