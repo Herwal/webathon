@@ -52,7 +52,7 @@ const Fireworks: React.FC = () => {
         }
 
         show() {
-          p.stroke(this.color.levels[0], this.color.levels[1], this.color.levels[2], this.lifespan);
+          p.stroke(p.red(this.color), p.green(this.color), p.blue(this.color), this.lifespan);
           p.strokeWeight(this.isFirework ? 8 : 3);
           p.point(this.pos.x, this.pos.y);
         }
@@ -72,7 +72,8 @@ const Fireworks: React.FC = () => {
         update() {
           if (!this.exploded) {
             this.core.update();
-            if (this.core.vel.y >= 0) {
+            const explodeHeight = p.random(p.height * 0.5, p.height * 0.2)
+            if (this.core.pos.y <= explodeHeight) { // Explode somewhere above the middle
               this.explode();
               this.exploded = true;
             }
@@ -107,7 +108,7 @@ const Fireworks: React.FC = () => {
       }
 
       p.setup = () => {
-        p.createCanvas(sketchRef.current!.offsetWidth, sketchRef.current!.offsetHeight);
+        p.createCanvas(600, 600);
       };
 
       p.draw = () => {
@@ -125,10 +126,6 @@ const Fireworks: React.FC = () => {
           }
         }
       };
-
-      p.windowResized = () => {
-        p.resizeCanvas(sketchRef.current!.offsetWidth, sketchRef.current!.offsetHeight);
-      };
     };
 
     const p5Instance = new p5(sketch, sketchRef.current!);
@@ -138,7 +135,7 @@ const Fireworks: React.FC = () => {
     };
   }, []);
 
-  return <div ref={sketchRef} style={{ width: "100%", height: "100vh" }} />;
+  return <div ref={sketchRef} style={{ width: "600px", height: "600px" }} />;
 };
 
 export default Fireworks;

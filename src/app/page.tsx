@@ -3,15 +3,15 @@
 import { useState, useEffect } from "react";
 
 const sketchNames = [
+  "EatBalls",
   "CarCrash",
   "CrazyMouse",
-  "EatBalls",
   "FallingBalls",
+  "Quiz",
   "Fireworks",
   "Flocking",
   "Piano",
   "PickTheDoor",
-  "Quiz",
   "Roulette",
   "SolarSystem",
   "SortingVisualiser",
