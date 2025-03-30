@@ -78,7 +78,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen bg-gray-900 text-white">
       {/* Left Sidebar */}
-      <aside className="hidden md:flex flex-col w-64 bg-gray-800 p-4 gap-4 flex-shrink-0">
+      <aside className="hidden md:flex flex-col w-50 bg-gray-800 p-4 gap-4 flex-shrink-0">
         <div className="w-full h-84 rounded-lg overflow-hidden">
           <Image
             src={leftSidebarImage}
@@ -144,7 +144,7 @@ export default function Home() {
       </div>
 
       {/* Right Sidebar */}
-      <aside className="hidden md:flex flex-col w-64 bg-gray-800 p-4 gap-4 flex-shrink-0">
+      <aside className="hidden md:flex flex-col w-50 bg-gray-800 p-4 gap-4 flex-shrink-0">
         <div className="w-full h-84 rounded-lg overflow-hidden">
           <Image
             src={rightSidebarImage}
