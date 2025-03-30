@@ -72,7 +72,7 @@ const Flocking: React.FC = () => {
               this.applyForce(chase);
             }
 
-            if (warpSpeed) this.velocity.mult(1.1);
+            if (warpSpeed) this.velocity.mult(2);
           }
         }
 
