@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const sketchNames = [
   "EatBalls",
@@ -79,10 +80,17 @@ export default function Home() {
       {/* Left Sidebar */}
       <aside className="hidden md:flex flex-col w-64 bg-gray-800 p-4 gap-4 flex-shrink-0">
         <div className="w-full h-84 rounded-lg overflow-hidden">
-          <img src={leftSidebarImage} alt="Left Sidebar" className="w-full h-full object-cover" />
+          <Image
+            src={leftSidebarImage}
+            alt="Left Sidebar"
+            layout="responsive"
+            width={300}
+            height={200}
+            className="rounded-lg object-cover"
+          />
         </div>
         <p className="text-center text-sm text-gray-300 mt-2">
-          "Pushing boundaries, rewriting the rules—because the future is now."
+          &quot;Pushing boundaries, rewriting the rules—because the future is now.&quot;
         </p>
       </aside>
 
@@ -138,10 +146,17 @@ export default function Home() {
       {/* Right Sidebar */}
       <aside className="hidden md:flex flex-col w-64 bg-gray-800 p-4 gap-4 flex-shrink-0">
         <div className="w-full h-84 rounded-lg overflow-hidden">
-          <img src={rightSidebarImage} alt="Legend, entrepenour, capital venturist" className="w-full h-full object-cover" />
+          <Image
+            src={rightSidebarImage}
+            alt="Legend, entrepreneur, capital venturist"
+            layout="responsive"
+            width={300}
+            height={200}
+            className="rounded-lg object-cover"
+          />
         </div>
         <p className="text-center text-sm text-gray-300 mt-2">
-          "Transforming bold ideas into game-changing innovations, because the future won’t wait, and neither will I."
+          &quot;Transforming bold ideas into game-changing innovations, because the future won’t wait, and neither will I.&quot;
         </p>
       </aside>
     </div>

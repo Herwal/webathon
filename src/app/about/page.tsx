@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+
 const leftSidebarImage = "/hhw_ny_2.png";
 const rightSidebarImage = "/pk_japan.png";
-const centerImage = "/center_image.png"; // Add the path to the center image
+const centerImage = "/center_image.png";
 
 export default function About() {
   return (
@@ -10,14 +13,17 @@ export default function About() {
       {/* Left Sidebar */}
       <aside className="hidden md:flex flex-col w-64 bg-gray-800 p-4 gap-4 flex-shrink-0">
         <div className="w-full h-84 rounded-lg overflow-hidden">
-          <img
+          <Image
             src={leftSidebarImage}
             alt="Left Sidebar"
-            className="w-full h-full object-cover"
+            layout="responsive"
+            width={300}
+            height={200}
+            className="rounded-lg object-cover"
           />
         </div>
         <p className="text-center text-sm text-gray-300 mt-2">
-          "When I think about the future, I don’t just see tech—I see a world where big data, neural networks, and cloud-native automation make everything smarter, faster, and cooler than I ever imagined."
+          &quot;When I think about the future, I don’t just see tech—I see a world where big data, neural networks, and cloud-native automation make everything smarter, faster, and cooler than I ever imagined.&quot;
         </p>
       </aside>
 
@@ -26,17 +32,15 @@ export default function About() {
         <header className="w-full bg-gray-800 p-4 text-center">
           <h1 className="text-3xl font-bold">About Us</h1>
           <div className="mt-4">
-            <a
-              href="/"
-              className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              Homepage
-            </a>
+            <Link href="/">
+              <a className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Homepage
+              </a>
+            </Link>
           </div>
         </header>
 
         <main className="flex flex-col items-center justify-center flex-grow p-4">
-          {/* Side-by-Side Layout */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-screen-lg">
             {/* Text Section */}
             <div className="text-lg text-gray-300 text-center md:text-left space-y-4 flex-1">
@@ -55,10 +59,13 @@ export default function About() {
 
             {/* Image Section */}
             <div className="w-full max-w-md flex-shrink-0 rounded-lg overflow-hidden">
-              <img
+              <Image
                 src={centerImage}
                 alt="Center Image"
-                className="w-full h-auto object-cover"
+                layout="responsive"
+                width={400}
+                height={300}
+                className="rounded-lg object-cover"
               />
             </div>
           </div>
@@ -69,12 +76,11 @@ export default function About() {
             © 2025 Brainrot Processing Showcase. All rights reserved.
           </p>
           <div className="mt-4">
-            <a
-              href="/"
-              className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              Homepage
-            </a>
+            <Link href="/">
+              <a className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Homepage
+              </a>
+            </Link>
           </div>
         </footer>
       </div>
@@ -82,14 +88,17 @@ export default function About() {
       {/* Right Sidebar */}
       <aside className="hidden md:flex flex-col w-64 bg-gray-800 p-4 gap-4 flex-shrink-0">
         <div className="w-full h-84 rounded-lg overflow-hidden">
-          <img
+          <Image
             src={rightSidebarImage}
             alt="Right Sidebar"
-            className="w-full h-full object-cover"
+            layout="responsive"
+            width={300}
+            height={200}
+            className="rounded-lg object-cover"
           />
         </div>
         <p className="text-center text-sm text-gray-300 mt-2">
-          "I’m not here to follow trends; I’m here to create them—combining AI, IoT, and blockchain to disrupt the way we think about everything from work to play."
+          &quot;I’m not here to follow trends; I’m here to create them—combining AI, IoT, and blockchain to disrupt the way we think about everything from work to play.&quot;
         </p>
       </aside>
     </div>
