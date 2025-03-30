@@ -1,8 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import p5 from "p5";
 
-//TODO: må kanskje være større enn 600x600 for å se hele effekten
-
 const Piano: React.FC = () => {
   const sketchRef = useRef<HTMLDivElement>(null);
 
@@ -13,9 +11,11 @@ const Piano: React.FC = () => {
 
       const numKeys = 9;
       const keyLetters = ["a", "s", "d", "f", "g", "h", "j", "k", "l"];
+      const soundFiles = ["E1.mp3", "E2.mp3", "E3.mp3", "E4.mp3", "E5.mp3", "E6.mp3", "E7.mp3", "F1.mp3", "F2.mp3"];
+      const sounds: HTMLAudioElement[] = soundFiles.map(file => new Audio(file));
+
       const colors: p5.Color[] = [];
       const beamLength = 200;
-
       const letterWidth = 1000 / numKeys;
       const beamYPos: number[] = Array(numKeys).fill(0);
       const beamActive: boolean[] = Array(numKeys).fill(false);
@@ -36,19 +36,11 @@ const Piano: React.FC = () => {
 
       p.draw = () => {
         p.background(0);
-
-        // Draw the keyboard keys at the bottom
         drawKeyboard();
-
-        // Draw the "letter" and beam for each active key
         for (let i = 0; i < numKeys; i++) {
           if (beamActive[i]) {
             drawLightBeam(keyXPos[i] + letterWidth / 2, beamYPos[i]);
-
-            // Move the light beam upwards
             beamYPos[i] -= 15;
-
-            // Stop the beam after it moves off-screen
             if (beamYPos[i] + beamLength < 0) {
               beamActive[i] = false;
             }
@@ -61,10 +53,12 @@ const Piano: React.FC = () => {
         for (let i = 0; i < numKeys; i++) {
           if (pressedKey === keyLetters[i]) {
             letterHeight = maxHeight;
-
-            // Start the beam at the bottom of the screen
             beamActive[i] = true;
             beamYPos[i] = p.height;
+            if (sounds[i]) {
+              sounds[i].currentTime = 0; // Restart the sound if already playing
+              sounds[i].play();
+            }
             break;
           }
         }
@@ -73,21 +67,19 @@ const Piano: React.FC = () => {
       const drawLightBeam = (xStart: number, yStart: number) => {
         const beamWidth = letterWidth * 0.9;
         const beamXStart = xStart - beamWidth / 2;
-
-        p.fill(0, 0, 255, 150); // Blue color with transparency
+        p.fill(0, 0, 255, 150);
         p.rect(beamXStart, yStart - beamLength, beamWidth, Math.min(beamLength, 1000));
       };
 
       const drawKeyboard = () => {
         const keyboardY = p.height - 100;
-
         for (let i = 0; i < numKeys; i++) {
-          p.fill(0, 0, 255); // Blue color for keys
+          p.fill(0, 0, 255);
           p.stroke(0);
           p.strokeWeight(2);
           p.rect(i * letterWidth, keyboardY, letterWidth, 100);
 
-          p.fill(0); // Black color for text
+          p.fill(0);
           p.textSize(50);
           p.textAlign(p.CENTER, p.CENTER);
           p.text(
@@ -100,7 +92,6 @@ const Piano: React.FC = () => {
     };
 
     const p5Instance = new p5(sketch, sketchRef.current!);
-
     return () => {
       p5Instance.remove();
     };
