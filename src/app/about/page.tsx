@@ -32,10 +32,8 @@ export default function About() {
         <header className="w-full bg-gray-800 p-4 text-center">
           <h1 className="text-3xl font-bold">About Us</h1>
           <div className="mt-4">
-            <Link href="/">
-              <a className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <Link href="/" className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
                 Homepage
-              </a>
             </Link>
           </div>
         </header>
@@ -75,13 +73,6 @@ export default function About() {
           <p className="text-xs md:text-sm">
             © 2025 Brainrot Processing Showcase. All rights reserved.
           </p>
-          <div className="mt-4">
-            <Link href="/">
-              <a className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                Homepage
-              </a>
-            </Link>
-          </div>
         </footer>
       </div>
 
