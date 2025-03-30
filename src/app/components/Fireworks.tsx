@@ -22,17 +22,15 @@ const Fireworks: React.FC = () => {
           this.lifespan = 255;
 
           if (isFirework) {
-            this.vel = p.createVector(0, p.random(-10, -15)); // Shoot up
+            this.vel = p.createVector(0, p.random(-12, -18)); // Shoot up
           } else {
-            this.vel = p5.Vector.random2D().mult(p.random(4, 10)); // Explode in random directions
+            this.vel = p5.Vector.random2D().mult(p.random(2, 7)); // Explode in random directions
           }
 
           this.acc = p.createVector(0, 0.1); // Gravity
 
           // Random colors for particles
-          this.color = isFirework
-            ? p.color(p.random(255), p.random(255), p.random(255))
-            : p.color(p.random(255), p.random(255), p.random(255), this.lifespan);
+          this.color = p.color(p.random(255), p.random(255), p.random(255));
         }
 
         applyForce(force: p5.Vector) {
@@ -45,7 +43,7 @@ const Fireworks: React.FC = () => {
           this.acc.mult(0);
 
           if (!this.isFirework) {
-            this.lifespan -= 5; // Fade out
+            this.lifespan -= 4; // Fade out effect
           }
         }
 
@@ -54,8 +52,8 @@ const Fireworks: React.FC = () => {
         }
 
         show() {
-          p.stroke(this.color);
-          p.strokeWeight(this.isFirework ? 8 : 5);
+          p.stroke(this.color.levels[0], this.color.levels[1], this.color.levels[2], this.lifespan);
+          p.strokeWeight(this.isFirework ? 8 : 3);
           p.point(this.pos.x, this.pos.y);
         }
       }
@@ -66,11 +64,7 @@ const Fireworks: React.FC = () => {
         exploded: boolean;
 
         constructor() {
-          // Constrain the initial x position to stay within bounds
-          const x = p.random(p.width * 0.1, p.width * 0.9);
-          // Constrain the initial y position to start between halfway and 80% of the height
-          const y = p.random(p.height * 0.5, p.height * 0.8);
-          this.core = new Particle(x, y, true);
+          this.core = new Particle(p.random(p.width * 0.2, p.width * 0.8), p.height, true);
           this.particles = [];
           this.exploded = false;
         }
@@ -93,7 +87,7 @@ const Fireworks: React.FC = () => {
         }
 
         explode() {
-          for (let i = 0; i < 150; i++) {
+          for (let i = 0; i < 100; i++) {
             this.particles.push(new Particle(this.core.pos.x, this.core.pos.y, false));
           }
         }
@@ -113,11 +107,11 @@ const Fireworks: React.FC = () => {
       }
 
       p.setup = () => {
-        p.createCanvas(600, 600);
+        p.createCanvas(sketchRef.current!.offsetWidth, sketchRef.current!.offsetHeight);
       };
 
       p.draw = () => {
-        p.background(0);
+        p.background(0, 25); // Light trail effect
 
         if (p.random(1) < 0.05) {
           fireworks.push(new Firework());
@@ -131,6 +125,10 @@ const Fireworks: React.FC = () => {
           }
         }
       };
+
+      p.windowResized = () => {
+        p.resizeCanvas(sketchRef.current!.offsetWidth, sketchRef.current!.offsetHeight);
+      };
     };
 
     const p5Instance = new p5(sketch, sketchRef.current!);
@@ -140,7 +138,7 @@ const Fireworks: React.FC = () => {
     };
   }, []);
 
-  return <div ref={sketchRef}></div>;
+  return <div ref={sketchRef} style={{ width: "100%", height: "100vh" }} />;
 };
 
 export default Fireworks;
